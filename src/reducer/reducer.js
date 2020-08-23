@@ -17,7 +17,6 @@ const reducer = (state = initialState, action) => {
         case "ADD_ITEM":
             return { ...state, [action.id]: action.data }
         
-
         case "ADD_TO_BASKET":
 
             const existedItem = state.basket.find(item => item.name === action.data.name)
@@ -107,20 +106,6 @@ const reducer = (state = initialState, action) => {
                 total: 0,
                 selectedCategories: []
             }
-        case "UPDATE_BASKET_ITEM":
-            alert("update")
-            return state
-
-        case "DELETE_ARTICLE":
-            return {
-                ...state, firebaseUserData: {
-                    ...state.firebaseUserData,
-                    articles: [
-                        ...state.firebaseUserData.articles.slice(0, action.index), ...state.firebaseUserData.articles.slice(action.index + 1)
-                    ]
-                }
-            }
-
         default:
             return state
     }

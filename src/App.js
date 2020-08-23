@@ -11,7 +11,7 @@ function App() {
   const state = useSelector(state => state)
   const dispatch = useDispatch();
 
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const [dropDownIsOpen, setDropDownIsOpen] = useState(false)
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
 
@@ -38,6 +38,10 @@ function App() {
   }
 
   const signOut = () => {
+    if (isOpen) {
+      alert(isOpen)
+      setIsOpen(false)
+    }
     dispatch(addItem("isSignedIn", false))
   }
 
@@ -71,7 +75,7 @@ function App() {
   return (
     <div>
 
-      <div className={isOpen ? "d-flex" : "d-flex toggled"} id="wrapper">
+      <div className={!isOpen ? "d-flex" : "d-flex toggled"} id="wrapper">
         <ShoppingCart />
         <div id="page-content-wrapper">
           {renderNavigation()}

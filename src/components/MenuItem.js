@@ -35,7 +35,6 @@ const MenuItem = (props) => {
         }, 500)
     }
 
-
     return (
         <div className="col-lg-4 col-md-6 mb-4">
             <div className="card h-100">
@@ -44,7 +43,7 @@ const MenuItem = (props) => {
                     <h4 className="card-title">
                         {props.dish.name}
                     </h4>
-                    <p className="text-muted">{props.category}</p>
+                    <p className="text-muted">{props.dish.category.name}</p>
                     <h5>AZN {props.dish.price.toFixed(2)}</h5>
                     <p className="card-text">{props.dish.description}</p>
                 </div>

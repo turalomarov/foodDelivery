@@ -12,7 +12,7 @@ const ShoppingCart = () => {
 
   if (!!basket.length) {
     return (
-      <div className="bg-light border-right" id="sidebar-wrapper">
+      <div className="bg-light border-right sidenav" id="sidebar-wrapper">
         <div className="">
           <h2 className="p-2">Shopping Cart</h2>
         </div>
@@ -33,13 +33,14 @@ const ShoppingCart = () => {
     );
   } else {
     return (
-      <div className="bg-light border-right " id="sidebar-wrapper">
+      <div className="bg-light border-right sidenav" id="sidebar-wrapper">
         <div className="">
           <h2 className="p-2">Shopping Cart</h2>
         </div>
         <div className="list-group ">
           <LottieComponent animation={cart} />
         </div>
+
       </div>
     );
   }

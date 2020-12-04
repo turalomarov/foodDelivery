@@ -41,7 +41,7 @@ const Main = () => {
             <div className="row">
 
                 <div className="col-lg-3 my-4">
-                    <div className="">
+                    <div className="side-accordion">
 
                         <Accordion onChange={(uuid) => toogleExpanded(uuid)} allowZeroExpanded={true}>
                             {state.db.map((item, index) => {

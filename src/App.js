@@ -45,7 +45,7 @@ function App() {
     dispatch(addItem("isSignedIn", false))
   }
 
-  console.log('hello from test branch 4')
+  console.log('hello world')
 
   const renderNavigation = () => {
     if (state.isSignedIn) {

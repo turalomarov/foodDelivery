@@ -45,6 +45,8 @@ function App() {
     dispatch(addItem("isSignedIn", false))
   }
 
+  console.log('hello from test branch 4')
+
   const renderNavigation = () => {
     if (state.isSignedIn) {
       return <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
